@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
             self.performSegue(withIdentifier: "loginToHome", sender: self)
         }
     }
-    
     let myUrl="https://api.twitter.com/oauth/request_token"
     @IBAction func onLoginButton(_ sender: Any) {
         TwitterAPICaller.client?.login(url: myUrl, success: {

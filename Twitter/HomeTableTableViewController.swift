@@ -21,6 +21,10 @@ class HomeTableTableViewController: UITableViewController {
         
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged); tableView.refreshControl=myRefreshControl
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
     @objc func loadTweets(){
         numberOfTweet=20
         let myUrl="https://api.twitter.com/1.1/statuses/home_timeline.json"
@@ -86,6 +90,5 @@ class HomeTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return tweetArray.count
-        //lololololol
     }
 }

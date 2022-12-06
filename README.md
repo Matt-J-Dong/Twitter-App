@@ -1,4 +1,4 @@
-# Twitter
+# Twitter-App
 This is a fully functional twitter app to view, compose, favorite, and retweet tweets.
 
 - [X] User can compose a tweet. 
